@@ -1,0 +1,10 @@
+services:
+  content-admin:
+    build:
+      context: .
+      args:
+        VITE_CONTENT_SERVER_URL: http://lynn2:4000
+    container_name: content-admin
+    ports:
+      - "8083:80"
+    restart: unless-stopped
